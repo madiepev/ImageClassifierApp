@@ -11,8 +11,18 @@ To be able to follow this tutorial, you will need access to the following things
 
 ## Some notes before continuing
 
-- Make sure all the resources you create exist within the same resource group in Azure. This will make it easier to delete all resources at the end of the tutorial.
-- This tutorial consists of instructions and labs. Instructions will guide you to create resources or use tools from Azure by using the GUI. Labs include the script you need to perform other tasks through code in between. Both are needed to follow the tutorial.  
+Make sure all the resources you create exist within the same resource group in Azure. This will make it easier to delete all resources at the end of the tutorial.
+
+Whenever you see a term like this in the lab files: 
+
+```python
+# Where you have to define keys or values
+"<Your-Key-Here>"
+# Where you have to give something your own name
+"/data/<Name-this-folder>"
+
+```
+These terms in between the angle brackets, need to be replaced with your own value. **Make sure all values in between angle brackets are replaced before running your code!**
 
 
 ## Exercise 1 - Bing Search
