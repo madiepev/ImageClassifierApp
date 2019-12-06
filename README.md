@@ -1,5 +1,11 @@
 # Image Classifier App
-Tutorial for workshop including Azure Cognitive Services, Azure Notebooks and Azure Storage Account
+
+### Why an image classifier app?
+
+In this tutorial, you will find images with Bing, upload your images to the cloud, label your images to classify the data and train a model to recognize the categories. You will then connect your model to a PowerApp. This way, you can upload a picture to your app and it will tell you what it sees. 
+
+### Contents
+Tutorial for workshop including Azure Cognitive Services, Azure Notebooks and Azure Storage Account.
 
 This is the content for the one-day workshop during which you will:
 - Use Azure Notebooks to execute the code in this project
