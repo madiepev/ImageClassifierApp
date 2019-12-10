@@ -1,7 +1,15 @@
-## Part 1:  Train Your Model
-Before you start, make sure you a have a folder with your images (50 per category, minimum of 2 categories), access to the Azure portal and an Office365 account.
+# Lab 4 - Train Custom Vision Model
 
-The content for training your model and building a classifier in Custom Vision is based on: https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier. 
+## Prerequisites
+- Finish lab files "Getting started" and Labs 1 - 3 before continuing with this. 
+- You should already have created a project within Custom Vision.
+- Images of at least two categories (with tags) should already have been uploaded to your project in Custom Vision. 
+If you encounter any missing prerequisites, go back to previous lab files to fix this.
+
+## Resources
+- [Quickstart Custom Vision](https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier)
+
+## Exercise 1
 
 
 
