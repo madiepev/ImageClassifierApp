@@ -43,12 +43,12 @@ All the necessary images have been uploaded. You have enough images and categori
 -	Check in the left pane that you have two categories or more. And that you have at least five pictures for each category. 
 -	On the right top, click on Train. Select Quick training. 	 
 
-<img src="/media/Part%201/13.png" alt="drawing" width="800"/>
+<img src="/media/Part%201/32.PNG" alt="drawing" width="800"/>
 
 When Custom Vision is done training the model, it will bring you to the new pane: Performance. Here you can see per time that you train a model, so per Iteration, what the results are. It seems our model has very positive results. Let’s see how well it actually does by testing it. 
 -	On the right top, click on Quick Test.	 
 
-<img src="/media/Part%201/14.png" alt="drawing" width="800"/>
+<img src="/media/Part%201/33.PNG" alt="drawing" width="800"/>
 
 -	Find an image you haven't used for training of one of your categories. You can copy the link or save the image locally.
 -	Paste the link to the image or click on Browse local files and select the test image (in this example a test image for the kitten through a URL). 
