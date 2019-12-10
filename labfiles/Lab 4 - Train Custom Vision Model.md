@@ -7,16 +7,13 @@
 If you encounter any missing prerequisites, go back to previous lab files to fix this.
 
 ## Resources
-- [Quickstart Custom Vision](https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier)
+- [Quickstart: How to build a classifier with Custom Vision](https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier)
 
 ## Exercise 1
 
-
-
-Create a Custom Vision project and train the model on your images
 -	Navigate to customvision.ai. 
 -	Click on Sign in. 
--	Log in with your company’s credentials (that are linked to Azure).	 
+-	Log in with your credentials (that are linked to Azure).	 
 
 <img src="/media/Part%201/1.png" alt="drawing" width="800"/>
 
@@ -27,100 +24,24 @@ When this pop-up appears during the log-in:
 -	Make sure to check the box to agree, after you read the agreement and terms. 
 -	Click on I agree.  	
 
-
-
 You are now in the home page of Custom Vision. Here you see your existing projects. On the top right you see the settings for your account. If there are any issues with the account that is linked to Custom Vision now, you can check there if the right account or directory is linked. 
--	Let’s start with clicking on a New Project.	 
+-	Select the project you created in the previous steps.	 
 
-<img src="/media/Part%201/3.png" alt="drawing" width="800"/>
-
-A pop-up will appear to help you create a new project.
--	Fill in a name for your project. 
--	Entering a description is optional. 
--	For Resource Group, click on create new on the right.	 
-
-<img src="/media/Part%201/4.png" alt="drawing" width="800"/>
-
-A new pop-up appears to help you create a new resource group. Behind the scenes, a new resource group will be created in Azure. 
--	Give your new resource group a name. 
--	Choose in which Azure Subscription this resource group should be created. 
--	Choose South Central US for location. 
-
-Note! This is necessary because of the current PowerApps connector. In a later phase, when the connector is not in preview anymore, you can choose whatever region you want.
--	Keep the Pricing Tier at S0. 
--	Click on Create resource.
-
-<img src="/media/Part%201/5.png" alt="drawing" width="800"/>
-
-Note! If any problems may arise here, it may have something to do with your Azure permissions, ask for help from your IT department if that occurs.	 
-
-
-Back to the pane where we were creating a new project. 
--	Name and resource group should be right now.
--	Make sure Project Types is set on classification. 
--	Classification Types can stay on Multiclass. 
--	You can keep the Domains at General, or choose whatever domain best fits your images. 
--	Click on Create project, to continue.	 
-
-<img src="/media/Part%201/5.png" alt="drawing" width="800"/>
+<img src="/media/Part%201/30.PNG" alt="drawing" width="800"/>
 
 We are now in our project. We will cover different aspects part by part. Let’s start with the most important thing: our data.
--	Upload your images by clicking on Add images.
--	Navigate to the folder on your laptop and upload these. 
-	 
-	 
-<img src="/media/Part%201/5.png" alt="drawing" width="800"/>
 
-This example has used images from Kaggle containing pictures of signs of the American Sign Language meaning either “A” or “B”. For your workshop you will work with your own ML problem
+You’ll now see all your images. On the left pane you see that under Tags, the option Tagged is selected. All you tags should be showing here. In the previous step you have uploaded all tagged images. 
 
-After you have clicked on Add images:
--	Browse to the folder with the images. 
--	Select all images of one category. This makes the tagging easier.	 
-In this example, we’ve selected all images where an “A” is signed. 
+By clicking on Untagged, you may, at any time, check whether there are still some images that have not been tagged and subsequently tag them. All images need to be tagged in order to train the model. 
 
-<img src="/media/Part%201/6.png" alt="drawing" width="800"/>
+You can also see how many images you have per category.
 
-After selecting the images, you can add a tag to the batch of images you have selected. 
--	Add your label for these images (in the example “The letter A”) to My Tags. 
--	Click on Upload 50 files.	 
-
-<img src="/media/Part%201/7.png" alt="drawing" width="800"/>
-
-The images will be uploaded and automatically tagged. 
--	Click on Done, when the process is completed.	 
-
-<img src="/media/Part%201/8.png" alt="drawing" width="800"/>
-
-You’ll now see all your images. On the left pane you see that under Tags, the option Tagged is selected and that “The letter A” is showing. 
-
-We have now tagged all uploaded images. By clicking on Untagged, you may, at any time, check whether there are still some images that have not been tagged and subsequently tag them. All images need to be tagged in order to train the model. 
-
-You can also see how many images you have per category. 
-
-Before we train the model, we still need to add one more category (we need at least two categories before we can train a classifier model).
-
-<img src="/media/Part%201/9.png" alt="drawing" width="800"/>
-
-Let’s upload our second category of images.
--	From the options in the top, choose Add images. 	 
-
-<img src="/media/Part%201/10.png" alt="drawing" width="800"/>
-
-
-Again, a pop-up will appear. This time make sure you only upload images you haven’t uploaded yet.
-Select all images from your second category and click on Open to upload them.
--	Add your label (in this example “The letter B”) to My Tags. 
--	Click on Upload 30 files.
-
-<img src="/media/Part%201/11.png" alt="drawing" width="800"/>
-
--	 Click on Done.	 
-
-<img src="/media/Part%201/12.png" alt="drawing" width="800"/>
+> You could see less images than you orignally collected from Bing because it couldn't upload the image to Custom Vision in previous steps. This is ok. As long as we have at least 2 tags and 5 images for every tag we can already train the model in Custom Vision.
 
 All the necessary images have been uploaded. You have enough images and categories now to train the model. 
--	Check in the left pane that you have two categories or more. And that you have at least 10 pictures for each category. 
--	On the right top, click on Train.	 
+-	Check in the left pane that you have two categories or more. And that you have at least five pictures for each category. 
+-	On the right top, click on Train. Select Quick training. 	 
 
 <img src="/media/Part%201/13.png" alt="drawing" width="800"/>
 
@@ -129,17 +50,16 @@ When Custom Vision is done training the model, it will bring you to the new pane
 
 <img src="/media/Part%201/14.png" alt="drawing" width="800"/>
 
--	Click on Browse local files. 
--	Select a test image (in this example a test image for the letter B). 
+-	Find an image you haven't used for training of one of your categories. You can copy the link or save the image locally.
+-	Paste the link to the image or click on Browse local files and select the test image (in this example a test image for the kitten through a URL). 
 
-<img src="/media/Part%201/15.png" alt="drawing" width="800"/>
+<img src="/media/Part%201/31.PNG" alt="drawing" width="800"/>
 
-The trained model will now make a prediction of which category this image is. On the right bottom you see Predictions where “The letter B” gets a 99.9% probability, which is right!
+The trained model will now make a prediction of which category this image is. On the right bottom you see Predictions where “kitten” gets a 99.9% probability, which is right!
 
 -	Click on the right cross at the top right to close this pane.	
 
-<img src="/media/Part%201/16.png" alt="drawing" width="800"/>
-Now that it works as we like we need to publish it so that we can get the endpoints necessary to connect our model with other applications. 
+Now that it works as we like, we need to publish it so that we can get the endpoints necessary to connect our model with other applications. 
 -	Click on Publish.	 
 
 <img src="/media/Part%201/17.png" alt="drawing" width="800"/>
