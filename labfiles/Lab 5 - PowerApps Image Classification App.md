@@ -1,3 +1,5 @@
+## Lab 5 - PowerApps Image Classification App
+
 Create a PowerApp and connect it to your Custom Vision model
 -	Navigate to powerapps.microsoft.com. 
 
